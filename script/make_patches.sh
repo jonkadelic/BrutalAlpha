@@ -4,16 +4,16 @@
 SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 source $SCRIPTPATH/common.sh
 
-# Check $SRCDIR exists
-if [ ! -d "$SRCDIR" ]; then
-    echo "Missing $(basename $SRCDIR)!"
+# Check $WORKSPACE_DIR exists
+if [ ! -d "$WORKSPACE_DIR" ]; then
+    echo "Missing $(basename $WORKSPACE_DIR)!"
     exit 1
 fi
 
-# Generate patches from files in SRCDIR
-cd $SRCDIR
+# Generate patches from files in WORKSPACE_DIR
+cd $WORKSPACE_DIR
 while IFS= read -r line; do
-    PATCHPATH="$PATCHDIR/${line%.*}.patch"
+    PATCHPATH="$PATCH_DIR/${line%.*}.patch"
     echo "Checking $line..."
     git diff --quiet --exit-code $line
     if [ $? -ne 0 ]; then
@@ -23,7 +23,7 @@ while IFS= read -r line; do
     fi
 done < $FILES_TXT
 
-# Copy untracked files to NEWSRCDIR
-cd $SRCDIR
-echo "Copying untracked files to $NEWSRCDIR..."
-git ls-files --others --exclude-standard | cpio -pdm $NEWSRCDIR
+# Copy untracked files to SRC_DIR
+cd $WORKSPACE_DIR
+echo "Copying untracked files to $SRC_DIR..."
+git ls-files --others --exclude-standard | cpio -pdm $SRC_DIR
