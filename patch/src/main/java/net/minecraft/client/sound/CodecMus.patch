@@ -1,0 +1,16 @@
+diff --git a/src/main/java/net/minecraft/client/sound/CodecMus.java b/src/main/java/net/minecraft/client/sound/CodecMus.java
+index 391b61b..125dcaf 100644
+--- a/src/main/java/net/minecraft/client/sound/CodecMus.java
++++ b/src/main/java/net/minecraft/client/sound/CodecMus.java
+@@ -8,4 +8,9 @@ import paulscode.sound.codecs.CodecJOrbis;
+ public class CodecMus extends CodecJOrbis {
+-	protected InputStream openInputStream() throws IOException {
+-		return new CodecMus.DecoderInputStream(this.url, this.urlConnection.getInputStream());
++	protected InputStream openInputStream() {
++		try {
++			return new CodecMus.DecoderInputStream(this.url, this.urlConnection.getInputStream());
++		} catch (IOException e) {
++			e.printStackTrace();
++			return null;
++		}
+ 	}

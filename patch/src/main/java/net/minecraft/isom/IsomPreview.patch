@@ -1,0 +1,9 @@
+diff --git a/src/main/java/net/minecraft/isom/IsomPreview.java b/src/main/java/net/minecraft/isom/IsomPreview.java
+index d5694bc..286add6 100644
+--- a/src/main/java/net/minecraft/isom/IsomPreview.java
++++ b/src/main/java/net/minecraft/isom/IsomPreview.java
+@@ -50,3 +50,3 @@ public class IsomPreview extends Canvas implements KeyListener, MouseListener, M
+ 		File var3;
+-		switch(null.a[getPlatform().ordinal()]) {
++		switch(getPlatform().ordinal()) {
+ 		case 1:

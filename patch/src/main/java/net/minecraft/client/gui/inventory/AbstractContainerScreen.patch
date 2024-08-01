@@ -1,0 +1,11 @@
+diff --git a/src/main/java/net/minecraft/client/gui/inventory/AbstractContainerScreen.java b/src/main/java/net/minecraft/client/gui/inventory/AbstractContainerScreen.java
+index 5d6d156..0cde124 100644
+--- a/src/main/java/net/minecraft/client/gui/inventory/AbstractContainerScreen.java
++++ b/src/main/java/net/minecraft/client/gui/inventory/AbstractContainerScreen.java
+@@ -18,4 +18,4 @@ public abstract class AbstractContainerScreen extends Screen {
+ 	private static ItemRenderer itemRenderer = new ItemRenderer();
+-	protected int imageWidth = 176;
+-	protected int imageHeight = 166;
++	public int imageWidth = 176;
++	public int imageHeight = 166;
+ 	protected List slots = new ArrayList();

@@ -1,0 +1,14 @@
+diff --git a/src/main/java/net/minecraft/client/Minecraft.java b/src/main/java/net/minecraft/client/Minecraft.java
+index 232482b..894849e 100644
+--- a/src/main/java/net/minecraft/client/Minecraft.java
++++ b/src/main/java/net/minecraft/client/Minecraft.java
+@@ -120,3 +120,3 @@ public abstract class Minecraft implements Runnable {
+ 		Thread var10001 = new Thread("Timer hack thread") {
+-			public {
++			{
+ 				this.setDaemon(true);
+@@ -306,3 +306,3 @@ public abstract class Minecraft implements Runnable {
+ 		File var2;
+-		switch(null.a[getPlatform().ordinal()]) {
++		switch(getPlatform().ordinal()) {
+ 		case 1:

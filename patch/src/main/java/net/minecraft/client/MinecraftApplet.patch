@@ -1,0 +1,9 @@
+diff --git a/src/main/java/net/minecraft/client/MinecraftApplet.java b/src/main/java/net/minecraft/client/MinecraftApplet.java
+index c342055..edde428 100644
+--- a/src/main/java/net/minecraft/client/MinecraftApplet.java
++++ b/src/main/java/net/minecraft/client/MinecraftApplet.java
+@@ -23,3 +23,3 @@ public class MinecraftApplet extends Applet {
+ 		};
+-		final boolean var1 = false;
++		boolean var1 = false;
+ 		if(this.getParameter("fullscreen") != null) {

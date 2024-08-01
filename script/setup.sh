@@ -6,18 +6,11 @@ source $SCRIPTPATH/common.sh
 
 # Data
 DATA=(
-    "https://piston-data.mojang.com/v1/objects/daa4b9f192d2c260837d3b98c39432324da28e86/client.jar $CLIENT_JAR"
-    "https://raw.githubusercontent.com/jonkadelic/a1.1.2_01-official/a5015effc14e9b09736f1b99a265ea7acfa1a0de/complete/a1.1.2_01-official.tiny $MAP_TINY"
-    "https://maven.fabricmc.net/net/fabricmc/tiny-remapper/0.9.0/tiny-remapper-0.9.0.jar $TINY_REMAPPER_JAR"
-    "https://github.com/Vineflower/vineflower/releases/download/1.10.1/vineflower-1.10.1-slim.jar $VINEFLOWER_JAR"
-    "https://maven.fabricmc.net/net/fabricmc/mapping-io/0.6.1/mapping-io-0.6.1.jar $MAPPING_IO_JAR"
-    "https://maven.fabricmc.net/org/ow2/asm/asm/9.7/asm-9.7.jar $ASM_JAR"
-    "https://maven.fabricmc.net/org/ow2/asm/asm-commons/9.7/asm-commons-9.7.jar $ASM_COMMONS_JAR"
-    "https://maven.fabricmc.net/org/ow2/asm/asm-tree/9.7/asm-tree-9.7.jar $ASM_TREE_JAR"
+    "https://github.com/MCPHackers/RetroMCP-Java/releases/download/v1.0/RetroMCP-Java-CLI.jar $RMCP_JAR"
 )
 
 # Make directories
-mkdir -p $DATA_DIR
+mkdir -p $DATA_LIB_DIR
 
 # Download data
 for i in "${DATA[@]}"; do
