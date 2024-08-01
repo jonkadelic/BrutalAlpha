@@ -2497,6 +2497,11 @@ c	f	com/mojang/nbt/FloatTag
 	m	(F)V	<init>	
 		p	1		data
 c	fa	net/minecraft/isom/IsomPreview$OS
+	f	Lfa;	a	linux
+	f	Lfa;	b	solaris
+	f	Lfa;	c	windows
+	f	Lfa;	d	macos
+	f	Lfa;	e	unknown
 c	fb	net/minecraft/client/renderer/DistanceChunkSorter
 	f	Lkh;	a	player
 	m	(Lkh;)V	<init>	
@@ -3670,6 +3675,11 @@ c	ig	net/minecraft/client/particle/BreakingItemParticle
 		p	6		z
 		p	8		item
 c	ih	net/minecraft/client/Minecraft$OS
+	f	Lih;	a	linux
+	f	Lih;	b	solaris
+	f	Lih;	c	windows
+	f	Lih;	d	macos
+	f	Lih;	e	unknown
 c	ii	net/minecraft/network/Connection
 	f	Ljava/lang/Object;	a	threadCounterLock
 	f	I	b	readThreads
